@@ -14,7 +14,7 @@ printf("Digite a opção desejada:\n");
 printf("1- Abrir um arquivo para gravação \n");
 printf("2- Abrir um arquivo para atualizar no final \n");
 printf("3 - Abrir um arquivo para leitura: \n");
-printf("4 - Abrir um arquivo e formatar: \n");
+printf("4 - Abrir um arquivo só para leitura formatada: \n");
 
 scanf("%d" , &opcao);
 fflush(stdin);
