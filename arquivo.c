@@ -15,6 +15,8 @@ printf("1- Abrir um arquivo para gravação \n");
 printf("2- Abrir um arquivo para atualizar no final \n");
 printf("3 - Abrir um arquivo para leitura: \n");
 printf("4 - Abrir um arquivo só para leitura formatada: \n");
+printf("5 - Abrir um arquivopara leitura e alteração geral: \n");
+
 
 scanf("%d" , &opcao);
 fflush(stdin);
@@ -29,6 +31,8 @@ switch(opcao){
     case 3: ler(arq, nomearq);
 			break;
     case 4:ler_formatado(arq,nomearq);
+           break;
+    case 5:ler_alterar_geral(arq,nomearq);
            break;
 
 }
