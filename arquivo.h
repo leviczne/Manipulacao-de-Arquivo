@@ -85,7 +85,7 @@ int ler_alterar_geral (FILE *arq,char nomearq[]){
 }
 
 int desafio(FILE *arq,char nomearq []){
-   /* ESSA DESGRAÇA NÃO FUNCIONA*/
+  
     int quant_alunos,n;
     float maior_media=0,menor_media=0,media;
     int i=0;
@@ -126,23 +126,11 @@ int desafio(FILE *arq,char nomearq []){
         
            
     }
-    fseek(arq,85,SEEK_SET);
-    fprintf(arq," %s",al_maior_media);
-
-    fseek(arq,108,SEEK_SET);
-    fprintf(arq," %.1f",menor_media);
-
-    fseek(arq,156,SEEK_SET);
-    fprintf(arq," %s",al_menor_media);
-
-    fseek(arq,179,SEEK_SET);
-    fprintf(arq," %.1f",maior_media);
-
-
-   
-//printf("menor media %.1f do aluno %s \n",menor_media,al_menor_media);
-//printf("maior media = %.1f",maior_media);
-fclose(arq);
-return 1;
+    fseek(arq,42,SEEK_SET);
+    fprintf(arq,"O aluno que apresenta o maior desempenho é %s com media igual %.1f\n",al_maior_media,maior_media);
+    fseek(arq,113,SEEK_SET);
+    fprintf(arq,"O aluno que apresenta o menor desempenho é %s com media igual  %.1f",al_menor_media,menor_media);
+    fclose(arq);
+    return 1;
 }
 
