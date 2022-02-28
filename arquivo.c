@@ -16,6 +16,8 @@ printf("2- Abrir um arquivo para atualizar no final \n");
 printf("3 - Abrir um arquivo para leitura: \n");
 printf("4 - Abrir um arquivo só para leitura formatada: \n");
 printf("5 - Abrir um arquivopara leitura e alteração geral: \n");
+printf("6 - Avaliação Pontuada\n");
+
 
 
 scanf("%d" , &opcao);
@@ -29,10 +31,12 @@ switch(opcao){
     case 2 : alterar_no_final(arq,nomearq);
              break;
     case 3: ler(arq, nomearq);
-			break;
+	     break;
     case 4:ler_formatado(arq,nomearq);
            break;
     case 5:ler_alterar_geral(arq,nomearq);
+           break;
+    case 6:desafio(arq,nomearq);
            break;
 
 }
